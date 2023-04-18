@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import css from './Section.module.css';
 
 Section.propTypes = {
   title: PropTypes.string.isRequired,
@@ -7,10 +8,10 @@ Section.propTypes = {
 
 function Section({ title, children }) {
   return (
-    <>
-      <h3>{title}</h3>
+    <div className={css.section}>
+      <h3 className={css.title}>{title}</h3>
       {children}
-    </>
+    </div>
   );
 }
 

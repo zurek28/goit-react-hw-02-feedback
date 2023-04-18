@@ -1,7 +1,8 @@
 import { Component } from 'react';
-import Section from './Section';
-import FeedbackOptions from './FeedbackOptions';
-import Statistics from './Statistics';
+import Section from './Section/Section';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Statistics from './Statistics/Statistics';
+import css from './App.module.css';
 
 const INITIAL_STATE = {
   good: 0,
@@ -20,7 +21,7 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <div className={css.wrapper}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -36,7 +37,7 @@ class App extends Component {
             positivePercentage={this.state.positivePercentage}
           />
         </Section>
-      </>
+      </div>
     );
   }
 }

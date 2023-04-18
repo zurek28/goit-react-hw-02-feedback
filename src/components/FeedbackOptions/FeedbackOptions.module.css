@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.button {
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Courgette';
+  background-color: rgb(94, 45, 0);
+  border: 2px rgb(255, 255, 255);
+  border-radius: 5px;
+  color: rgb(197, 197, 197);
+}

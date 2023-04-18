@@ -1,3 +1,5 @@
+import css from './FeedbackOptions.module.css';
+
 function FeedbackOptions({ options, onLeaveFeedback }) {
   let { good, neutral, bad, total, positivePercentage } = options;
   const handleClick = event => {
@@ -35,17 +37,17 @@ function FeedbackOptions({ options, onLeaveFeedback }) {
   };
 
   return (
-    <>
-      <button name="good" onClick={handleClick}>
+    <div>
+      <button className={css.button} name="good" onClick={handleClick}>
         Good
       </button>
-      <button name="neutral" onClick={handleClick}>
+      <button className={css.button} name="neutral" onClick={handleClick}>
         Neutral
       </button>
-      <button name="bad" onClick={handleClick}>
+      <button className={css.button} name="bad" onClick={handleClick}>
         Bad
       </button>
-    </>
+    </div>
   );
 }
 

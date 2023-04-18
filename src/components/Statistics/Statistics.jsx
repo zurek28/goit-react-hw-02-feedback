@@ -1,5 +1,6 @@
-import Notification from './Notification';
+import Notification from '../Notification/Notification';
 import PropTypes from 'prop-types';
+import css from './Statistics.module.css';
 
 Statistics.propTypes = {
   good: PropTypes.number.isRequired,
@@ -19,13 +20,13 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
   }
 
   return (
-    <>
+    <div className={css.statistics}>
       <p>Good: {good}</p>
       <p>Neutral: {neutral}</p>
       <p>Bad: {bad}</p>
       <p>Total: {total}</p>
       <p>Positive feedback: {positivePercentage}%</p>
-    </>
+    </div>
   );
 }
 
