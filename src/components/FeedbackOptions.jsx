@@ -1,5 +1,4 @@
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  console.log(options);
   let { good, neutral, bad, total, positivePercentage } = options;
   const handleClick = event => {
     const name = event.target.name;
